@@ -1,0 +1,965 @@
+Score.Title=Sonata 4 - 3 Adagio
+Score.Comment=bwv 1017
+Score.KeySignature=-3
+Score.KeyMode=IONIAN
+Score.Quarter=12
+Score.Atom=1/24
+Score.Division=[36, 12, 6, 3, 1]
+Score.Period=1
+Score.Bpm=78.0
+Voice[0].Clef=TREBLE
+Voice[0].MidiInstrument=VIOLIN
+! VoiceInstance 0 12
+! b&-1 12
+! e&0 21
+! c0 3
+! d0 9
+! f0 3
+! a&0 21
+! f0 3
+! g0 9
+! b&0 3
+! c1 12
+! d0 12
+! b&-1 12
+! VoiceInstance 0 156
+! b&-1 12
+! e&0 21
+! c0 3
+! d0 9
+! f0 3
+! a&0 21
+! f0 3
+! g0 9
+! b&0 3
+! c1 12
+! d0 12
+! b&-1 12
+! VoiceInstance 0 300
+! e&0 12
+! d&1 21
+! b&0 3
+! c1 9
+! d0 3
+! e&0 18
+! a&0 6
+! f0 18
+! e&0 6
+! e&0 24
+! VoiceInstance 0 444
+! b&0 12
+! d&0 21
+! c0 3
+! f0 9
+! d0 3
+! e&0 18
+! c0 6
+! a&-1 18
+! g-1 6
+! g-1 24
+! VoiceInstance 0 588
+! g0 12
+! e&1 21
+! c1 3
+! d1 9
+! b0 3
+! f0 21
+! e&0 3
+! f#0 9
+! a0 3
+! c1 21
+! a0 3
+! b0 12
+! VoiceInstance 0 732
+! e&1 12
+! g0 21
+! e&0 3
+! f0 9
+! b0 3
+! d1 21
+! b0 3
+! c1 9
+! a&0 3
+! f#0 9
+! g0 3
+! c0 9
+! a&-1 3
+! b-1 12
+! VoiceInstance 0 876
+! g0 9
+! a&0 3
+! b&0 21
+! c1 3
+! d&1 9
+! b&0 3
+! c1 21
+! f1 3
+! d&1 9
+! c1 3
+! b&0 9
+! a&0 3
+! f0 24
+! VoiceInstance 0 1020
+! a&0 9
+! f0 3
+! d&0 21
+! b-1 3
+! c0 9
+! e0 3
+! f0 21
+! b&0 3
+! g0 18
+! f0 6
+! f0 24
+! VoiceInstance 0 1164
+! a&0 9
+! b&0 3
+! c1 24
+! b&0 9
+! g0 3
+! a&0 21
+! f0 3
+! g0 9
+! c1 3
+! a0 21
+! b&0 3
+! d0 12
+! VoiceInstance 0 1308
+! e&0 9
+! f0 3
+! g0 21
+! e&0 3
+! f0 9
+! d0 3
+! b&-1 21
+! g-1 3
+! a-1 9
+! c0 3
+! e&0 21
+! c0 3
+! d0 12
+! VoiceInstance 0 1452
+! b&0 9
+! c1 3
+! d&1 21
+! b&0 3
+! c1 9
+! a&0 3
+! f0 21
+! d0 3
+! e&0 9
+! g0 3
+! a&0 21
+! f0 3
+! g0 9
+! d&0 3
+! b&-1 21
+! g-1 3
+! a&-1 9
+! c0 3
+! d&0 21
+! b&-1 3
+! c0 9
+! e&0 3
+! f#0 21
+! f0 3
+! d0 18
+! e&0 6
+! e&0 24
+! VoiceInstance 0 1740
+! b&0 12
+! d&0 21
+! b&-1 3
+! c0 9
+! e&0 3
+! a&0 21
+! g0 3
+! d1 12
+! f0 21
+! d0 3
+! e&0 9
+! g0 3
+! d&1 21
+! c1 3
+! f1 12
+! a&0 21
+! f0 3
+! g0 9
+! c1 3
+! a0 9
+! b&0 3
+! d0 9
+! e&0 3
+! b&-1 12
+! a&-1 3
+! g-1 3
+! a&-1 6
+! g-1 12
+! VoiceInstance 0 2022
+! g1 3
+! f1 3
+! e&1 3
+! d1 3
+! c1 3
+! e&1 3
+! a&0 15
+! c1 3
+! e&1 3
+! d1 3
+! c1 3
+! b&0 3
+! a&0 3
+! c1 3
+! f#0 15
+! a0 3
+! c1 3
+! b&0 3
+! a0 3
+! g0 3
+! f#0 3
+! a0 3
+! c0 24
+! b-1 24
+Voice[1].Clef=TREBLE
+Voice[1].MidiInstrument=GRAND_PIANO
+! VoiceInstance 1 0
+! e&0 4
+! b&-1 4
+! g0 4
+! e&0 4
+! b&-1 4
+! g0 4
+! e&0 4
+! b&-1 4
+! g0 4
+! f0 4
+! b&-1 4
+! a&0 4
+! f0 4
+! d0 4
+! b&0 4
+! f0 4
+! d0 4
+! c1 4
+! b&0 4
+! e&1 4
+! a&0 4
+! b&0 4
+! e&1 4
+! g0 4
+! f0 4
+! a&0 4
+! c1 8
+! a&0 4
+! f0 4
+! d0 4
+! f0 4
+! d0 4
+! b&-1 4
+! d0 4
+! a&-1 4
+! g-1 4
+! b&-1 4
+! d0 4
+! e&0 4
+! b&-1 4
+! g0 4
+! e&0 4
+! b&-1 4
+! g0 4
+! f0 4
+! b&-1 4
+! a&0 4
+! f0 4
+! d0 4
+! b&0 4
+! f0 4
+! d0 4
+! c1 4
+! b&0 4
+! e&1 4
+! a&0 4
+! b&0 4
+! e&1 4
+! g0 4
+! f0 4
+! a&0 4
+! c1 8
+! a&0 4
+! f0 4
+! d0 4
+! f0 4
+! d0 4
+! b&-1 4
+! d0 4
+! f0 4
+! b&0 4
+! g0 4
+! e&1 4
+! b&0 4
+! g0 4
+! e&1 4
+! b&0 4
+! g0 4
+! d&1 4
+! b&0 4
+! g0 4
+! d&1 4
+! c1 4
+! f1 4
+! a&0 4
+! g0 4
+! e&0 4
+! b&0 4
+! c1 4
+! d1 4
+! e&1 8
+! d1 4
+! f1 4
+! b&0 4
+! c1 4
+! a&0 4
+! g0 4
+! e&0 4
+! f0 4
+! g0 4
+! a&0 4
+! b&0 4
+! c1 4
+! e&1 4
+! d1 4
+! e&1 4
+! e&0 4
+! g0 4
+! b&0 4
+! g0 4
+! e&1 4
+! b&0 4
+! g0 4
+! e&1 4
+! e&0 4
+! b&0 4
+! a&0 4
+! c1 4
+! b&0 4
+! a&0 4
+! g0 4
+! a&0 4
+! b&0 4
+! c1 4
+! d1 4
+! e&1 4
+! d1 4
+! e&1 4
+! f1 4
+! b&0 4
+! e&1 4
+! d1 4
+! e&1 4
+! b&0 4
+! g0 4
+! e&0 4
+! g0 4
+! b&0 4
+! e&1 4
+! b&0 4
+! g0 4
+! e&0 4
+! g1 4
+! d1 4
+! e&1 4
+! g1 4
+! b0 4
+! c1 4
+! e&1 4
+! g1 4
+! f1 4
+! a&1 4
+! e&1 4
+! f1 4
+! a&1 4
+! b0 4
+! d1 4
+! f1 4
+! a&1 4
+! g1 4
+! b0 4
+! c1 4
+! e&1 4
+! b0 4
+! c1 4
+! f#1 4
+! b0 4
+! c1 4
+! g1 4
+! e&1 4
+! c1 4
+! d1 4
+! g1 4
+! b0 4
+! c1 4
+! g1 4
+! d1 4
+! e&1 4
+! g1 4
+! d1 4
+! e&1 4
+! g1 4
+! b0 4
+! c1 4
+! d1 4
+! e&1 8
+! b0 4
+! c1 4
+! d1 4
+! f1 4
+! e&1 4
+! f1 4
+! g1 4
+! a&1 8
+! f1 4
+! g1 4
+! f1 4
+! d1 4
+! e&1 4
+! d1 4
+! b0 4
+! c1 4
+! d1 4
+! g1 4
+! c1 4
+! d1 4
+! g1 4
+! d1 4
+! b0 4
+! d1 4
+! g0 4
+! c1 4
+! g0 4
+! a&0 4
+! b&0 4
+! c1 4
+! d&1 8
+! b&0 4
+! g0 4
+! e0 4
+! d&1 4
+! c1 4
+! b&0 4
+! a&0 4
+! g0 4
+! f0 4
+! g0 4
+! e0 4
+! f0 4
+! g0 4
+! a&0 4
+! b&0 4
+! e1 4
+! f1 4
+! g0 4
+! d&1 4
+! c1 4
+! b&0 4
+! g0 4
+! a&0 4
+! f0 4
+! f1 4
+! e1 4
+! f1 4
+! a&1 4
+! g1 4
+! a&1 4
+! e1 4
+! f1 4
+! d&1 4
+! e1 4
+! f1 4
+! a&1 4
+! e1 4
+! f1 4
+! b&0 4
+! a&1 4
+! g1 4
+! f1 4
+! e1 4
+! d&1 4
+! c1 4
+! b&0 4
+! a&0 4
+! g0 4
+! g1 4
+! f1 4
+! e1 4
+! g1 4
+! c1 4
+! d&1 4
+! c1 4
+! b&0 4
+! a&0 4
+! f1 4
+! c1 4
+! a&0 4
+! c1 4
+! a&0 4
+! f0 4
+! a&0 4
+! g0 4
+! a&0 4
+! c1 4
+! a&0 4
+! f0 4
+! c0 4
+! g0 4
+! a&0 4
+! f0 4
+! c1 4
+! f1 4
+! a&1 4
+! f1 4
+! d1 4
+! b&0 4
+! e&1 4
+! f1 4
+! d1 4
+! b&1 8
+! e&1 4
+! d1 4
+! e&1 4
+! f1 4
+! g1 4
+! f1 4
+! g1 4
+! e&1 4
+! d1 4
+! f1 4
+! d1 4
+! b&0 4
+! d1 4
+! f1 4
+! a&1 4
+! g1 4
+! f1 4
+! b&1 4
+! g1 4
+! e&1 4
+! b&0 4
+! c1 4
+! d&1 8
+! c1 4
+! b&0 4
+! c1 4
+! e&1 4
+! a&1 4
+! d1 4
+! f1 4
+! b&1 4
+! e&1 4
+! b&0 4
+! g0 4
+! e&0 4
+! f0 4
+! g0 4
+! f0 4
+! d0 4
+! e&0 4
+! a0 4
+! d0 4
+! e&0 4
+! b&0 4
+! f0 4
+! a0 4
+! b&0 4
+! f0 4
+! d0 4
+! b&-1 4
+! d0 4
+! f0 8
+! e&0 4
+! g0 4
+! b&0 4
+! e&1 4
+! b&0 4
+! g0 4
+! b&0 4
+! g0 4
+! e&0 4
+! a&0 4
+! g0 4
+! a&0 4
+! b&0 4
+! c1 4
+! d1 4
+! b0 4
+! a&0 4
+! g0 4
+! c1 4
+! b0 4
+! c1 4
+! d1 4
+! e&1 4
+! f1 4
+! d1 4
+! b&0 8
+! e&1 4
+! d1 4
+! e&1 4
+! f1 4
+! g1 6
+! a&1 2
+! b&1 4
+! d&1 4
+! c1 4
+! f1 4
+! e1 4
+! f1 4
+! g1 4
+! a&1 8
+! f1 4
+! g1 4
+! a&1 4
+! e&1 4
+! d&1 4
+! e&1 4
+! c1 4
+! b&0 4
+! c1 4
+! e&0 4
+! d0 4
+! e&0 4
+! g&0 4
+! a0 4
+! b&0 4
+! f0 4
+! a&0 4
+! c1 4
+! b&0 4
+! a&0 4
+! g0 4
+! b&0 4
+! g0 4
+! e&0 4
+! f0 4
+! g0 4
+! a&0 4
+! b&0 4
+! c1 4
+! d&1 4
+! b&0 4
+! g0 4
+! e&0 4
+! d&1 4
+! b&0 4
+! g0 4
+! b&0 4
+! g0 4
+! e&0 4
+! a&0 4
+! g0 4
+! a&0 4
+! b&0 4
+! c1 4
+! d1 4
+! f1 4
+! e&1 4
+! f1 4
+! d1 4
+! b0 4
+! g0 4
+! f1 4
+! d1 4
+! b0 4
+! d1 4
+! b0 4
+! g0 4
+! c1 4
+! b0 4
+! c1 4
+! d1 4
+! e&1 4
+! f1 4
+! a&1 4
+! g1 4
+! a&1 4
+! e&1 4
+! g1 4
+! a&1 4
+! b&1 4
+! c2 4
+! b&1 4
+! f1 4
+! d1 4
+! b&0 4
+! e&1 4
+! d1 4
+! e&1 4
+! f1 4
+! g1 4
+! f1 4
+! g1 4
+! e&1 4
+! a&1 4
+! f1 4
+! g1 4
+! d1 4
+! e&1 4
+! b&0 4
+! c1 4
+! f1 4
+! d1 4
+! e&1 4
+! g1 4
+! e&1 4
+! b&0 4
+! e&1 4
+! d1 4
+! e&1 4
+! b&0 4
+! g0 4
+! e&0 12
+! VoiceInstance 1 2034
+! g1 3
+! f1 3
+! e&1 3
+! d1 3
+! c1 3
+! b0 3
+! c1 12
+! VoiceInstance 1 2070
+! c2 3
+! b&1 3
+! a1 3
+! g1 3
+! f#1 3
+! a1 3
+! c1 3
+! a0 3
+! f#0 3
+! g0 3
+! a0 3
+! b&0 3
+! c1 3
+! d1 3
+! e&1 3
+! c1 3
+! g1 3
+! f#1 3
+! g1 36
+Voice[2].Clef=BASS
+Voice[2].MidiInstrument=GRAND_PIANO
+! VoiceInstance 2 0
+! e&-1 12
+! VoiceInstance 2 36
+! b&-2 12
+! VoiceInstance 2 72
+! e&-2 12
+! e&-1 12
+! a&-2 12
+! b&-2 12
+! VoiceInstance 2 126
+! b&-2 6
+! d-1 6
+! b&-2 6
+! e&-1 12
+! VoiceInstance 2 180
+! b&-2 12
+! VoiceInstance 2 216
+! e&-2 12
+! e&-1 12
+! a&-2 12
+! b&-2 12
+! VoiceInstance 2 270
+! b&-2 6
+! d-1 6
+! b&-2 6
+! g-2 12
+! VoiceInstance 2 324
+! a&-2 12
+! VoiceInstance 2 342
+! b&-2 6
+! c-1 6
+! g-2 6
+! a&-2 6
+! f-2 6
+! b&-2 12
+! b&-1 12
+! c0 12
+! VoiceInstance 2 414
+! c-1 6
+! b&-2 6
+! a&-2 6
+! g-2 12
+! VoiceInstance 2 468
+! a&-2 18
+! b&-2 6
+! c-1 6
+! g-2 6
+! a&-2 12
+! b&-2 12
+! b&-2 12
+! e&-2 12
+! VoiceInstance 2 558
+! e&-1 6
+! g-1 6
+! e&-1 6
+! c-1 12
+! VoiceInstance 2 612
+! b&-2 12
+! VoiceInstance 2 648
+! e&-1 12
+! a-2 12
+! d-1 12
+! g-2 12
+! VoiceInstance 2 702
+! g-1 6
+! e&-1 6
+! g-1 6
+! c-1 12
+! VoiceInstance 2 756
+! d-1 12
+! VoiceInstance 2 792
+! e&-1 12
+! a&-2 12
+! a-2 12
+! g-2 12
+! VoiceInstance 2 846
+! g-1 6
+! d-1 6
+! f-1 6
+! e-1 12
+! VoiceInstance 2 900
+! a&-2 12
+! VoiceInstance 2 936
+! d&-1 12
+! b&-2 12
+! c-1 12
+! d&-2 12
+! VoiceInstance 2 990
+! d&-1 6
+! c-1 6
+! b&-2 6
+! f-1 12
+! VoiceInstance 2 1044
+! g-2 12
+! VoiceInstance 2 1068
+! a&-2 12
+! b&-2 12
+! c-1 12
+! c-2 12
+! f-2 12
+! VoiceInstance 2 1134
+! f-2 6
+! a&-2 6
+! c-1 6
+! f-1 12
+! VoiceInstance 2 1176
+! e&-1 12
+! d-1 12
+! VoiceInstance 2 1212
+! b&-2 12
+! e&-1 12
+! VoiceInstance 2 1248
+! c-1 12
+! b&-2 12
+! VoiceInstance 2 1278
+! b&-1 6
+! f-1 6
+! a&-1 6
+! g-1 12
+! VoiceInstance 2 1320
+! e&-1 12
+! a&-1 12
+! VoiceInstance 2 1356
+! g-1 12
+! c-1 12
+! VoiceInstance 2 1392
+! f-1 12
+! b&-2 12
+! VoiceInstance 2 1422
+! b&-2 6
+! a&-2 6
+! f-2 6
+! g-2 12
+! VoiceInstance 2 1464
+! e&-1 12
+! a&-1 12
+! VoiceInstance 2 1500
+! b-2 12
+! c-1 12
+! VoiceInstance 2 1536
+! d-1 12
+! e&-1 12
+! VoiceInstance 2 1572
+! e-1 12
+! f-1 12
+! VoiceInstance 2 1608
+! b&-2 12
+! a&-2 12
+! VoiceInstance 2 1644
+! a-2 12
+! b&-2 12
+! VoiceInstance 2 1674
+! b&-1 6
+! a&-1 6
+! b&-1 6
+! d&-1 12
+! VoiceInstance 2 1710
+! c-1 6
+! b&-2 6
+! a&-2 6
+! g-2 12
+! VoiceInstance 2 1752
+! e&-2 12
+! a&-2 12
+! VoiceInstance 2 1788
+! f-2 12
+! b-2 12
+! VoiceInstance 2 1824
+! g-2 12
+! c-1 12
+! VoiceInstance 2 1860
+! e&-1 12
+! a&-2 12
+! VoiceInstance 2 1896
+! d-2 12
+! e&-2 12
+! VoiceInstance 2 1932
+! c-1 12
+! b&-2 12
+! VoiceInstance 2 1962
+! g-2 6
+! a&-2 6
+! b&-2 6
+! e&-2 12
+! VoiceInstance 2 1998
+! e&-1 6
+! g-1 6
+! e&-1 6
+! c-1 12
+! VoiceInstance 2 2052
+! e&-1 12
+! VoiceInstance 2 2088
+! d-1 12
+! VoiceInstance 2 2112
+! d-2 12
+! g-2 36
+Shake(108,0)=DOWN_TRILL
+Shake(252,0)=DOWN_TRILL
+Shake(372,0)=DOWN_TRILL
+Shake(516,0)=DOWN_TRILL
+Shake(1092,0)=DOWN_TRILL
+Shake(1668,0)=DOWN_TRILL
+Shake(1968,0)=DOWN_TRILL
+Text@144=p129.l3
+Text@324=p129.l4
+Text@504=p129.l5
+Text@648=p130.l1
+Text@792=p130.l2
+Text@936=p130.l3
+Text@1080=p130.l4
+Text@1224=p130.l5
+Text@1368=p131.l1
+Text@1512=p131.l2
+Text@1656=p131.l3
+Text@1836=p131.l4
+Text@1980=p131.l5
