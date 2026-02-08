@@ -13,7 +13,7 @@ import ch.alpine.sonata.scr.Score;
 import ch.alpine.sonata.seq.MidiListings;
 import ch.alpine.sonata.seq.MidiSequence;
 import ch.alpine.sonata.seq.VoicedSequence;
-import sys.Filename;
+import ch.alpine.tensor.ext.PathName;
 
 /** Support for MIDI format type 1.
  * 
@@ -45,7 +45,7 @@ public class MidiFormat implements ImportScoreFormat, ExportScoreFormat {
 
   @Override
   public void put(Path file, Score score, Object object) throws Exception {
-    final Filename filename = new Filename(file);
+    final PathName filename = PathName.of(file);
     Path output = filename.withExtension("mid");
     putFile(output, score);
     // ---

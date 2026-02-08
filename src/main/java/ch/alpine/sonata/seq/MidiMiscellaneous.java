@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.seq;
 
 import java.nio.file.Path;

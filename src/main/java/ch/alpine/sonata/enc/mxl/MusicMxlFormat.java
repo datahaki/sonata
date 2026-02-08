@@ -9,7 +9,7 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 import ch.alpine.sonata.scr.Score;
-import sys.Filename;
+import ch.alpine.tensor.ext.PathName;
 
 /** information about content is contained in
  * META-INF/container.xml (if present)
@@ -48,7 +48,7 @@ public class MusicMxlFormat extends MusicXmlAbstract {
    * @param exportOptions
    * @throws Exception */
   static void putScore(Path file, Score score) throws Exception {
-    Filename filename = new Filename(file);
+    PathName filename = PathName.of(file);
     try (ZipOutputStream zipOutputStream = new ZipOutputStream(Files.newOutputStream(file))) {
       final String myString = filename.title() + ".xml";
       // ---

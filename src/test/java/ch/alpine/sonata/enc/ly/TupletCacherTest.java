@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc.ly;
 
 import java.nio.file.Path;
@@ -12,7 +13,7 @@ import ch.alpine.tensor.ext.HomeDirectory;
 class TupletCacherTest {
   @Test
   void test() {
-    Score score = ScoreIO.read(Unprotect.path("/io/nvm/bwv1017_3.nvm"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv1017_3.nvm"));
     // System.out.println(score.quarter);
     Path file = HomeDirectory.Music.path("test.pdf");
     ScoreIO.write(file, score);

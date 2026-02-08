@@ -5,7 +5,7 @@ import java.nio.file.Path;
 
 import ch.alpine.sonata.enc.ly.LilypondParam;
 import ch.alpine.sonata.scr.Score;
-import ch.alpine.tensor.ext.FileBaseName;
+import ch.alpine.tensor.ext.PathName;
 
 public enum ScoreIO {
   ;
@@ -28,11 +28,11 @@ public enum ScoreIO {
    * @param score
    * @param exportOptions */
   public static Path write(Path file, Score score, LilypondParam exportOptions) {
-    return write(Encodings.INSTANCE.getEncoding(file).orElseThrow(), file.getParent(), FileBaseName.of(file), score, exportOptions);
+    return write(Encodings.INSTANCE.getEncoding(file).orElseThrow(), file.getParent(), PathName.of(file).title(), score, exportOptions);
   }
 
   public static Path write(Path file, Score score) {
-    return write(Encodings.INSTANCE.getEncoding(file).orElseThrow(), file.getParent(), FileBaseName.of(file), score, null);
+    return write(Encodings.INSTANCE.getEncoding(file).orElseThrow(), file.getParent(), PathName.of(file).title(), score, null);
   }
 
   public static Path write(Encoding encoding, Path directory, String title, Score score, Object object) {

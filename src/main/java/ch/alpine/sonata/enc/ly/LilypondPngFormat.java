@@ -10,7 +10,7 @@ import java.util.Optional;
 import ch.alpine.sonata.enc.api.DiatonicPrecision;
 import ch.alpine.sonata.enc.api.ExportScoreFormat;
 import ch.alpine.sonata.scr.Score;
-import sys.Filename;
+import ch.alpine.tensor.ext.PathName;
 
 public final class LilypondPngFormat implements ExportScoreFormat, DiatonicPrecision {
   public static final LilypondLayout LAYOUT = LilypondLayout.png_default();
@@ -20,7 +20,7 @@ public final class LilypondPngFormat implements ExportScoreFormat, DiatonicPreci
     LilypondParam lilypondParam = Objects.isNull(object) //
         ? new LilypondParam()
         : (LilypondParam) object;
-    Filename filename = new Filename(file);
+    PathName filename = PathName.of(file);
     Path lyFile = filename.withExtension("ly");
     LilypondFormat.putFile(lyFile, score, LAYOUT, lilypondParam);
     cleanOldPngFiles(filename);
@@ -28,11 +28,11 @@ public final class LilypondPngFormat implements ExportScoreFormat, DiatonicPreci
     { // single page becomes numbered page
       Path pngFile = filename.withExtension("png");
       if (Files.isRegularFile(pngFile))
-        Files.move(pngFile, filename.file().getParent().resolve(filename.title() + "-page1.png"));
+        Files.move(pngFile, filename.parent().resolve(filename.title() + "-page1.png"));
     }
   }
 
-  private static void cleanOldPngFiles(Filename filename) throws Exception {
+  private static void cleanOldPngFiles(PathName filename) throws Exception {
     Optional.of(filename.withExtension("png")) //
         .filter(Files::isRegularFile) //
         .ifPresent(t -> {
@@ -45,7 +45,7 @@ public final class LilypondPngFormat implements ExportScoreFormat, DiatonicPreci
     {
       int count = 0;
       while (true) {
-        Path pngFile = filename.file().getParent().resolve(filename.title() + "-page" + ++count + ".png");
+        Path pngFile = filename.parent().resolve(filename.title() + "-page" + ++count + ".png");
         if (Files.isRegularFile(pngFile))
           Files.delete(pngFile);
         else

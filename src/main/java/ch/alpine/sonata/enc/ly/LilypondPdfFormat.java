@@ -7,7 +7,7 @@ import java.util.Objects;
 import ch.alpine.sonata.enc.api.DiatonicPrecision;
 import ch.alpine.sonata.enc.api.ExportScoreFormat;
 import ch.alpine.sonata.scr.Score;
-import sys.Filename;
+import ch.alpine.tensor.ext.PathName;
 
 public final class LilypondPdfFormat implements ExportScoreFormat, DiatonicPrecision {
   public static final LilypondLayout LAYOUT = LilypondLayout.pdf_default();
@@ -17,7 +17,7 @@ public final class LilypondPdfFormat implements ExportScoreFormat, DiatonicPreci
     LilypondParam lilypondParam = Objects.isNull(object) //
         ? new LilypondParam()
         : (LilypondParam) object;
-    Path lyFile = new Filename(file).withExtension("ly");
+    Path lyFile = PathName.of(file).withExtension("ly");
     LilypondFormat.putFile(lyFile, score, LAYOUT, lilypondParam);
     LilypondFormat.compile(lyFile, "--pdf", "-dno-point-and-click");
   }

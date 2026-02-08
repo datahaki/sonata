@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.mid.cmp;
 
 import java.util.HashMap;

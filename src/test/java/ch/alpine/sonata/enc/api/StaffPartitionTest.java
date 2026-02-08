@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc.api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,7 +17,7 @@ import ch.alpine.tensor.Unprotect;
 class StaffPartitionTest {
   @Test
   void test() {
-    Path file = Unprotect.path("/io/nvm/bwv0603.nvm");
+    Path file = Unprotect.resourcePath("/io/nvm/bwv0603.nvm");
     Score score = ScoreIO.read(file);
     assertEquals(score.staffPartition, "{2, 1, 1}");
     List<List<Voice>> list = StaffPartition.getStaffList(score);

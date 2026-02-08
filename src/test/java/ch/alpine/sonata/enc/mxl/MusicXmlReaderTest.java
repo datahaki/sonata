@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc.mxl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,7 +12,7 @@ import ch.alpine.tensor.Unprotect;
 class MusicXmlReaderTest {
   @Test
   void test() {
-    Score score = ScoreIO.read(Unprotect.path("/io/mxl/bwv1014_1.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/bwv1014_1.mxl"));
     assertEquals(score.staffPartition, "{2, 2, 1}");
   }
 }

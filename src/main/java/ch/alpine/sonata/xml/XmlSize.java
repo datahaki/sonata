@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.xml;
 
 import java.io.Serializable;

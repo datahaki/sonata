@@ -28,14 +28,14 @@ import ch.alpine.sonata.utl.Duplicates;
 import ch.alpine.sonata.utl.ScoreMerge;
 import ch.alpine.sonata.utl.Shuffler;
 import ch.alpine.sonata.utl.Stylist;
-import sys.Filename;
+import ch.alpine.tensor.ext.PathName;
 import sys.mat.IntRange;
 
 /** does not read lyrics */
 class MidiScoreReader {
   protected Score get(Path file) throws Exception {
     MidiProperties midiProperties = null;
-    Path managerFile = new Filename(file).withExtension("properties");
+    Path managerFile = PathName.of(file).withExtension("properties");
     if (Files.exists(managerFile))
       midiProperties = new MidiProperties(managerFile); // .equip(myScore)
     return get(MidiSystem.getSequence(Files.newInputStream(file)), midiProperties);

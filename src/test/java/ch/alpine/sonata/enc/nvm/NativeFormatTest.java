@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc.nvm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,27 +18,27 @@ import ch.alpine.tensor.chq.ExactScalarQ;
 import ch.alpine.tensor.ext.Serialization;
 
 class NativeFormatTest {
+  @TempDir
+  Path tempDir;
+
   @Test
   void testNvm() throws ClassNotFoundException, IOException {
-    Path file = Unprotect.path("/io/nvm/bwv0528_2.nvm");
+    Path file = Unprotect.resourcePath("/io/nvm/bwv0528_2.nvm");
     Score score = ScoreIO.read(file);
     assertEquals(score.voices(), 3);
     Serialization.copy(score);
   }
 
-  @TempDir
-  Path folder;
-
   @Test
   void testInstr() {
-    Score score = ScoreIO.read(Unprotect.path("/io/nvm/bwv0528_2.nvm"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv0528_2.nvm"));
     ExactScalarQ.require(score.bpm);
     assertEquals(score.bpm, SI.PER_MINUTE.quantity(99));
     assertEquals(score.voices.get(0).midiInstrument, MidiInstrument.GRAND_PIANO);
     score.voices.get(0).midiInstrument = MidiInstrument.VIOLIN;
     score.voices.get(1).midiInstrument = MidiInstrument.TRUMPET;
     score.voices.get(2).midiInstrument = MidiInstrument.NYLON_GUITAR;
-    Path file = folder.resolve("test.nvm");
+    Path file = tempDir.resolve("test.nvm");
     score.bpm = SI.PER_MINUTE.quantity(117);
     ScoreIO.write(file, score);
     Score score2 = ScoreIO.read(file);

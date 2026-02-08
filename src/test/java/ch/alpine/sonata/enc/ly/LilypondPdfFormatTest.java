@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc.ly;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,7 +16,7 @@ import ch.alpine.tensor.ext.HomeDirectory;
 class LilypondPdfFormatTest {
   @Test
   void test() {
-    Score score = ScoreIO.read(Unprotect.path("/io/nvm/bwv1014_2.nvm"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv1014_2.nvm"));
     assertEquals(score.keySignature, KeySignature.D);
     Path file = HomeDirectory.Music.path("test3.pdf");
     ScoreIO.write(file, score);

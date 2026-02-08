@@ -16,7 +16,7 @@ import ch.alpine.tensor.ext.HomeDirectory;
 class LilypondPngFormatTest {
   @Test
   void test() {
-    Score score = ScoreIO.read(Unprotect.path("/io/nvm/bwv1014_2.nvm"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv1014_2.nvm"));
     assertEquals(score.keySignature, KeySignature.D);
     Path file = HomeDirectory.Music.path("test.png");
     ScoreIO.write(file, score);

@@ -12,7 +12,7 @@ import javax.sound.midi.ShortMessage;
 import javax.sound.midi.Track;
 
 import ch.alpine.midkit.Midi;
-import sys.Filename;
+import ch.alpine.tensor.ext.PathName;
 import sys.mat.IntRange;
 
 public enum MidiSafemode {
@@ -149,6 +149,6 @@ public enum MidiSafemode {
   }
 
   public static void defaultExport(Path file) throws Exception {
-    Midi.write(MidiSafemode.getSequence(file), new Filename(file).withExtension("safemode.mid"));
+    Midi.write(MidiSafemode.getSequence(file), PathName.of(file).withExtension("safemode.mid"));
   }
 }

@@ -1,8 +1,8 @@
+// code by jph
 package ch.alpine.sonata.enc.mxl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
@@ -29,6 +29,9 @@ import ch.alpine.tensor.ext.HomeDirectory;
 import ch.alpine.tensor.ext.Serialization;
 
 class MusicXmlFormatTest {
+  @TempDir
+  Path tempDir;
+
   static void _checkTest01(Score score) {
     assertEquals(score.quarter, 1);
     assertEquals(score.title, "MyTitle");
@@ -56,15 +59,15 @@ class MusicXmlFormatTest {
 
   @Test
   void test01() {
-    Score score = ScoreIO.read(Unprotect.path("/io/mxl/test_score01.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score01.mxl"));
     _checkTest01(score);
   }
 
   @Test
-  void testWriteRead(@TempDir Path folder) throws ClassNotFoundException, IOException {
-    Path file = folder.resolve("temp.mxl");
+  void testWriteRead() throws ClassNotFoundException, IOException {
+    Path file = tempDir.resolve("temp.mxl");
     {
-      Score score = ScoreIO.read(Unprotect.path("/io/mxl/test_score01.mxl"));
+      Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score01.mxl"));
       ScoreIO.write(file, score);
     }
     Score score = ScoreIO.read(file);
@@ -74,14 +77,14 @@ class MusicXmlFormatTest {
 
   @Test
   void test02() throws ClassNotFoundException, IOException {
-    Score score = ScoreIO.read(Unprotect.path("/io/mxl/test_score02.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score02.mxl"));
     assertEquals(score.voices.size(), 4);
     Serialization.copy(score);
   }
 
   @Test
   void test03() throws ClassNotFoundException, IOException {
-    Score score = ScoreIO.read(Unprotect.path("/io/mxl/test_score03.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score03.mxl"));
     assertEquals(score.voices.size(), 4);
     {
       assertEquals(score.voices.get(0).press.size(), 1);
@@ -112,15 +115,12 @@ class MusicXmlFormatTest {
     assertEquals(score.voices.get(1).midiInstrument, MidiInstrument.GRAND_PIANO);
   }
 
-  @TempDir
-  File folder;
-
   @Test
   void testMidiInstr() throws Exception {
     Path xmlFile; // = new File(folder, "bwv1014_2.xml");
     xmlFile = HomeDirectory.Downloads.resolve("bwv1014_2.xml");
     {
-      Path file = Unprotect.path("/io/nvm/bwv1014_2.nvm");
+      Path file = Unprotect.resourcePath("/io/nvm/bwv1014_2.nvm");
       Score score = ScoreIO.read(file);
       _checkBwv1014_2(score);
       ScoreIO.write(xmlFile, score);

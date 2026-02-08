@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc.ly;
 
 import ch.alpine.bridge.ref.ann.FieldSelectionArray;

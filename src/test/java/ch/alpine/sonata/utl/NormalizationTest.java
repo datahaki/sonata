@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.utl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,7 +22,7 @@ import ch.alpine.tensor.Unprotect;
 class NormalizationTest {
   @Test
   void testXml() {
-    Path file = Unprotect.path("/io/mxl/test_score01.mxl");
+    Path file = Unprotect.resourcePath("/io/mxl/test_score01.mxl");
     Score score = ScoreIO.read(file);
     assertEquals(score.keySignature, KeySignature.A);
     Normalization.keySignature0(score);

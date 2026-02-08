@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.utl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,7 +19,7 @@ import ch.alpine.tensor.Unprotect;
 class ScoreTransposeTest {
   @Test
   void testNvm() {
-    Path file = Unprotect.path("/io/nvm/mm_fuge01.nvm");
+    Path file = Unprotect.resourcePath("/io/nvm/mm_fuge01.nvm");
     Score score = ScoreIO.read(file);
     assertEquals(score.voices(), 3);
     {

@@ -1,3 +1,4 @@
+// code by jph
 package ch.alpine.sonata.enc;
 
 import java.nio.file.Path;
@@ -5,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import ch.alpine.tensor.ext.FileExtension;
+import ch.alpine.tensor.ext.PathName;
 
 public enum Encodings {
   INSTANCE;
@@ -18,7 +19,7 @@ public enum Encodings {
   }
 
   private static String getMarker(Path file) {
-    return FileExtension.of(file).toLowerCase();
+    return PathName.of(file).extension().toLowerCase();
   }
 
   public Optional<Encoding> getEncoding(Path file) {
