@@ -18,7 +18,7 @@ class LilypondPdfFormatTest {
   void test() {
     Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv1014_2.nvm"));
     assertEquals(score.keySignature, KeySignature.D);
-    Path file = HomeDirectory.Music.path("test3.pdf");
+    Path file = HomeDirectory.Music.resolve("test3.pdf");
     ScoreIO.write(file, score);
   }
 }

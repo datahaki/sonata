@@ -15,7 +15,7 @@ class TupletCacherTest {
   void test() {
     Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv1017_3.nvm"));
     // System.out.println(score.quarter);
-    Path file = HomeDirectory.Music.path("test.pdf");
+    Path file = HomeDirectory.Music.resolve("test.pdf");
     ScoreIO.write(file, score);
   }
 }

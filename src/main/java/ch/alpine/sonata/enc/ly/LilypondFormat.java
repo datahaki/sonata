@@ -7,16 +7,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import ch.alpine.bridge.io.UserName;
 import ch.alpine.sonata.enc.api.DiatonicPrecision;
 import ch.alpine.sonata.enc.api.ExportScoreFormat;
 import ch.alpine.sonata.scr.Score;
 import ch.alpine.tensor.ext.HomeDirectory;
+import ch.alpine.tensor.ext.UserName;
 
 public final class LilypondFormat implements ExportScoreFormat, DiatonicPrecision {
   // FIXME
   public static Path COMMAND = UserName.is("datahaki") //
-      ? HomeDirectory.path("Public", "lilypond-2.24.3/bin", "lilypond")
+      ? HomeDirectory.Public.resolve("lilypond-2.24.3/bin", "lilypond")
       : Path.of("lilypond");
 
   /** generates single .ly file (without further processing to pdf etc.)
