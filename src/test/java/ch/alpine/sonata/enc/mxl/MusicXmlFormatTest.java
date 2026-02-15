@@ -116,7 +116,7 @@ class MusicXmlFormatTest {
   }
 
   @Test
-  void testMidiInstr() throws Exception {
+  void testMidiInstr() {
     Path xmlFile; // = new File(folder, "bwv1014_2.xml");
     xmlFile = HomeDirectory.Downloads.resolve("bwv1014_2.xml");
     {

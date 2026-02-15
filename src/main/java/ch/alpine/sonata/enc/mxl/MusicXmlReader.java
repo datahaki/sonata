@@ -218,7 +218,7 @@ public class MusicXmlReader extends XmlReader {
   }
 
   @Override
-  public void push(String token, String group) throws Exception {
+  public void push(String token, String group) {
     // mutually exclusive so ordering does not matter
     // we order based on frequency
     if (token.equals("note")) {
@@ -246,7 +246,7 @@ public class MusicXmlReader extends XmlReader {
   }
 
   @Override
-  public void pushpop(String token, String group) throws Exception {
+  public void pushpop(String token, String group) {
     // System.out.println("pushPop " + myToken + " " + myGroup);
     if (Objects.nonNull(xmlNote)) {
       // BEGIN: for <note>
@@ -384,7 +384,7 @@ public class MusicXmlReader extends XmlReader {
   }
 
   @Override
-  public void pop(String token) throws Exception {
+  public void pop(String token) {
     if (token.equals("note")) {
       processXmlNote();
     } else //
