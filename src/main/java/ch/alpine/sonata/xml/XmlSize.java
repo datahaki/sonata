@@ -4,7 +4,7 @@ package ch.alpine.sonata.xml;
 import java.io.Serializable;
 import java.util.List;
 
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.ext.Serialization;
@@ -13,10 +13,10 @@ import ch.alpine.tensor.io.MathematicaFormat;
 public class XmlSize implements Serializable {
   public static final List<Scalar> MULTIPLIER = List.of( //
       // 1, 1 + 1/2, 1 + 1/2 + 1/4, ...
-      RationalScalar.of(1, 1), //
-      RationalScalar.of(3, 2), //
-      RationalScalar.of(7, 4), //
-      RationalScalar.of(15, 8));
+      Rational.of(1, 1), //
+      Rational.of(3, 2), //
+      Rational.of(7, 4), //
+      Rational.of(15, 8));
   // ---
   public int duration;
   public XmlType type = null;

@@ -41,7 +41,7 @@ import ch.alpine.sonata.utl.Timeshift;
 import ch.alpine.sonata.xml.XmlMeta;
 import ch.alpine.sonata.xml.XmlNote;
 import ch.alpine.sonata.xml.XmlType;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.Scalars;
@@ -299,7 +299,7 @@ public class MusicXmlReader extends XmlReader {
   private void processXmlNote() {
     if (Objects.nonNull(xmlNote.xmlSize.type) && !xmlNote.isGrace && xmlNote.xmlSize.hasTimeModification()) {
       try {
-        quarter.set(Scalars.intValueExact(RationalScalar.of(xmlNote.xmlSize.duration, 4).divide(xmlNote.xmlSize.getCombinedFraction())));
+        quarter.set(Scalars.intValueExact(Rational.of(xmlNote.xmlSize.duration, 4).divide(xmlNote.xmlSize.getCombinedFraction())));
       } catch (Exception exception) {
         myScore.appendText(ticks, xmlNote.toInfoString(), true);
         xmlNote.step = null; // condemn note to become rest
@@ -314,7 +314,7 @@ public class MusicXmlReader extends XmlReader {
           // the majority of xml files define the attribute "type", but technically "type" is redundant... so we don't require it and check for null:
           if (Objects.nonNull(xmlNote.xmlSize.type) && !xmlNote.isGrace)
             try {
-              quarter.set(Scalars.intValueExact(RationalScalar.of(xmlNote.xmlSize.duration, 4).divide(xmlNote.xmlSize.getCombinedFraction())));
+              quarter.set(Scalars.intValueExact(Rational.of(xmlNote.xmlSize.duration, 4).divide(xmlNote.xmlSize.getCombinedFraction())));
             } catch (Exception exception) {
               log(exception.getMessage(), false);
             }

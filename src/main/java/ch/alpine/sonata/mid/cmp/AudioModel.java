@@ -26,7 +26,7 @@ import ch.alpine.sonata.tri.cho.BalancedChordScore;
 import ch.alpine.sonata.tri.cho.ChordScore;
 import ch.alpine.sonata.tri.cho.ChordScoreEmit;
 import ch.alpine.sonata.utl.Timescale;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.tmp.ResamplingMethod;
@@ -40,11 +40,11 @@ public class AudioModel {
   // ---
   public static final List<Scalar> fermataFractions = List.of( //
       RealScalar.ONE, //
-      RationalScalar.of(3, 4), //
-      RationalScalar.of(2, 3), //
-      RationalScalar.of(1, 2), //
-      RationalScalar.of(1, 3), //
-      RationalScalar.of(1, 4));
+      Rational.of(3, 4), //
+      Rational.of(2, 3), //
+      Rational.of(1, 2), //
+      Rational.of(1, 3), //
+      Rational.of(1, 4));
   /** begin of selection */
   public int audio_ticks = 0;
   /** end of selection */

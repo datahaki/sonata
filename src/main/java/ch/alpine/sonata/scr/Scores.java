@@ -8,7 +8,7 @@ import java.util.SortedMap;
 import ch.alpine.sonata.Clef;
 import ch.alpine.sonata.ScoreEntry;
 import ch.alpine.sonata.Voice;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.alg.Array;
 import ch.alpine.tensor.sca.Ceiling;
@@ -42,7 +42,7 @@ public enum Scores {
 
   public static Score create(final int voices) { // use voice=0 for adaptive scores
     Score score = new Score();
-    int semi = Ceiling.intValueExact(RationalScalar.of(voices, 2));
+    int semi = Ceiling.intValueExact(Rational.of(voices, 2));
     for (int _voice : IntRange.positive(voices)) {
       Voice voice = new Voice();
       if (_voice < semi) {

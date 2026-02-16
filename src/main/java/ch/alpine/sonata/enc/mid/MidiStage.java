@@ -28,7 +28,7 @@ import ch.alpine.sonata.KeySignature;
 import ch.alpine.sonata.Metric;
 import ch.alpine.sonata.Voice;
 import ch.alpine.sonata.scr.Score;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.Scalars;
 import ch.alpine.tensor.num.GCD;
@@ -151,7 +151,7 @@ public class MidiStage {
         score.quarter = myInt;
         if (meter.isPresent()) {
           Ratio ratio = meter.orElseThrow();
-          int measure = Scalars.intValueExact(RationalScalar.of(4 * ratio.num() * score.quarter, ratio.den()));
+          int measure = Scalars.intValueExact(Rational.of(4 * ratio.num() * score.quarter, ratio.den()));
           // IntegerMath.divideExact(4 * meter.num * score.quarter, meter.den);
           if (Metric.measuresList.contains(measure))
             score.division = Divisions.best(score.quarter, measure, meter.orElseThrow());

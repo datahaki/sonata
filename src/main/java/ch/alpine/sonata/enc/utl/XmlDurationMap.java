@@ -17,7 +17,7 @@ import ch.alpine.sonata.Tone;
 import ch.alpine.sonata.xml.XmlNote;
 import ch.alpine.sonata.xml.XmlSize;
 import ch.alpine.sonata.xml.XmlType;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.Scalar;
 import sys.mat.IntRange;
 
@@ -51,7 +51,7 @@ public class XmlDurationMap {
         }
       }
       {
-        Scalar multiplier = RationalScalar.of(2, 3); // triole
+        Scalar multiplier = Rational.of(2, 3); // triole
         if (xmlType.isAvailable(quarter, multiplier)) {
           int duration = xmlType.duration(quarter, multiplier);
           for (int ticks = 0; ticks < measure; ticks += duration)

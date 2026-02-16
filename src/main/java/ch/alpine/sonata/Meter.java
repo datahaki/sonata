@@ -4,7 +4,7 @@ package ch.alpine.sonata;
 import java.io.Serializable;
 import java.util.List;
 
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.ext.Integers;
 import sys.mat.Ratio;
 
@@ -17,7 +17,7 @@ import sys.mat.Ratio;
  * equation: m / (4 * q) = n / 2 ^ k */
 public record Meter(int num, int den) implements Serializable {
   public static Meter of(int quarter, Division division) {
-    Ratio ratio = Ratio.of(RationalScalar.of(division.measure, 4 * quarter));
+    Ratio ratio = Ratio.of(Rational.of(division.measure, 4 * quarter));
     // ---
     int index = division.maxDepth;
     if (division.getList().contains(quarter))

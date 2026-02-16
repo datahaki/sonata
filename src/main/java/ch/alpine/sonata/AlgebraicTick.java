@@ -1,7 +1,7 @@
 // code by jph
 package ch.alpine.sonata;
 
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.Scalars;
@@ -26,7 +26,7 @@ public class AlgebraicTick implements Comparable<AlgebraicTick> {
   }
 
   public AlgebraicTick(int ticks, Division division) {
-    this(RationalScalar.of(ticks, division.measure), division.depthAt(ticks));
+    this(Rational.of(ticks, division.measure), division.depthAt(ticks));
   }
 
   public boolean equalsModMeasure(AlgebraicTick algebraicTick) {

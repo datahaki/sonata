@@ -33,7 +33,7 @@ import ch.alpine.sonata.utl.Shuffler;
 import ch.alpine.sonata.utl.Stylist;
 import ch.alpine.sonata.utl.TimescalePacker;
 import ch.alpine.sonata.utl.Timeshift;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.Scalars;
@@ -228,7 +228,7 @@ public class KernFormat implements ImportScoreFormat, //
     else
       new RuntimeException("warning: key undefined").printStackTrace();
     // ---
-    score.quarter = Scalars.intValueExact(RationalScalar.of(measure, 4).divide(meter));
+    score.quarter = Scalars.intValueExact(Rational.of(measure, 4).divide(meter));
     score.division = Divisions.best(score.quarter, measure, MusedataMeta.getSafeRatio(ratio.orElseThrow()));
     // ---
     int count = 0;

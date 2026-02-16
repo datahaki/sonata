@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 import ch.alpine.sonata.Diatone;
 import ch.alpine.sonata.Note;
 import ch.alpine.sonata.Tone;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.Scalars;
 import sys.mat.IntRange;
 
@@ -76,7 +76,7 @@ public class KernNoteFormat implements NoteFormat {
     int den = Integer.parseInt(matcher.group());
     int ticks = den == 0 //
         ? 2 * basis
-        : Scalars.intValueExact(RationalScalar.of(basis, den));
+        : Scalars.intValueExact(Rational.of(basis, den));
     int incr = ticks;
     for (@SuppressWarnings("unused")
     int __ : IntRange.positive(occur['.'])) {

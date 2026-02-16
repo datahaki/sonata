@@ -10,7 +10,7 @@ import java.util.Map;
 import ch.alpine.sonata.Clef;
 import ch.alpine.sonata.Voice;
 import ch.alpine.sonata.scr.Score;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.sca.Ceiling;
 import sys.mat.IntRange;
 import sys.mat.Ratio;
@@ -37,7 +37,7 @@ public enum Stylist {
     }
     // assign stems (depends on clef assignment
     for (List<Integer> myList : myMap.values()) {
-      int split = Ceiling.intValueExact(RationalScalar.of(myList.size(), 2));
+      int split = Ceiling.intValueExact(Rational.of(myList.size(), 2));
       for (int voice : IntRange.positive(split)) {
         int index = myList.get(voice);
         // myScore.myVoices.get(index).myStem = Stem.UP; // FIXME TPF

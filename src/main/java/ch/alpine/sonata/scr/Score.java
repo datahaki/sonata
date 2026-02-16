@@ -20,7 +20,7 @@ import ch.alpine.sonata.ScoreEntry;
 import ch.alpine.sonata.Torrent;
 import ch.alpine.sonata.Voice;
 import ch.alpine.sonata.tri.Triad;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.Scalar;
 import ch.alpine.tensor.Scalars;
@@ -64,7 +64,7 @@ public class Score extends VoiceScore {
   public boolean isKeyModeValid = true;
   public boolean hasDiatonicPrecision = true;
   public int quarter = 2; // ticks per quarter
-  public Scalar atom = RationalScalar.of(1, 32);
+  public Scalar atom = Rational.of(1, 32);
   public Division division = Division.FALLBACK;
   public int period = 1;
   /** bpm = quarters per minute */
@@ -89,7 +89,7 @@ public class Score extends VoiceScore {
   }
 
   public int measures() {
-    return Ceiling.intValueExact(RationalScalar.of(ticks(), measure()));
+    return Ceiling.intValueExact(Rational.of(ticks(), measure()));
   }
 
   public Integer anyEntry(Integer myInteger) {
@@ -108,7 +108,7 @@ public class Score extends VoiceScore {
   /** @param ticks
    * @return duration of ticks in seconds (depends on bpm and quarter) */
   public Scalar seconds(int ticks) {
-    return SI.SECONDS.convert(bpm.reciprocal().multiply(RationalScalar.of(ticks, quarter)));
+    return SI.SECONDS.convert(bpm.reciprocal().multiply(Rational.of(ticks, quarter)));
   }
 
   public Meter getMeter() {

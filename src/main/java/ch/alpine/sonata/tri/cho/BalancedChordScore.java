@@ -7,7 +7,7 @@ import java.util.Set;
 
 import ch.alpine.sonata.Natur;
 import ch.alpine.sonata.Torrent;
-import ch.alpine.tensor.RationalScalar;
+import ch.alpine.tensor.Rational;
 import ch.alpine.tensor.RealScalar;
 import ch.alpine.tensor.api.ScalarUnaryOperator;
 import ch.alpine.tensor.itp.BSplineBasis;
@@ -29,7 +29,7 @@ public class BalancedChordScore extends ChordScore {
   }
 
   private double eval(int pitch) {
-    return spline.apply(RationalScalar.of(pitch - pitch_mean, 12)).number().doubleValue() * amplification;
+    return spline.apply(Rational.of(pitch - pitch_mean, 12)).number().doubleValue() * amplification;
   }
 
   @Override
