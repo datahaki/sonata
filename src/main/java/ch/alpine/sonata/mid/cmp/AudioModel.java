@@ -330,7 +330,7 @@ public class AudioModel {
       // }
       // }
       // // if (ritardandoMeasures != 0 || ritardandoReduction != 0 || limp != 0)
-      // if (!fermataFraction.equals(RationalScalar.ONE)) {
+      // if (!fermataFraction.equals(Rational.ONE)) {
       // // System.out.println("---");
       // // IntRanges<IntRange> fermatas = new IntRanges<>(); // TODO TPF take from getPlayScore function
       // fermatas.intersect(newAudioFirst, newAudioStops);
