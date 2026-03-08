@@ -3,8 +3,8 @@ package ch.alpine.sonata.enc;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 import ch.alpine.sonata.enc.api.DiatonicPrecision;
 import ch.alpine.sonata.enc.api.ExportScoreFormat;
@@ -71,7 +71,7 @@ public enum Encoding {
     this.abstractFormat = abstractFormat;
     this.importScoreFormat = abstractFormat instanceof ImportScoreFormat importScoreFormat ? importScoreFormat : null;
     this.exportScoreFormat = abstractFormat instanceof ExportScoreFormat exportScoreFormat ? exportScoreFormat : null;
-    extensions = Stream.of(extension).toList();
+    extensions = Arrays.stream(extension).toList();
     Integers.requireLessEquals(1, extensions.size());
   }
 

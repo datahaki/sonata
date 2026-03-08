@@ -2,14 +2,14 @@
 package ch.alpine.sonata;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Stream;
 
 /** immutable, hashCode and equals are from Object */
 public class Tone implements Serializable {
   private static final List<Tone> LIST = Ivory.all().stream() //
-      .flatMap(ivory -> Stream.of(Alter.values()) //
+      .flatMap(ivory -> Arrays.stream(Alter.values()) //
           .map(alter -> new Tone(ivory, alter))) //
       // TODO TPF consider filtering out tones with pitch out of range
       .toList();

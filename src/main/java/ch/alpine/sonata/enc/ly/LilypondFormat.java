@@ -3,9 +3,9 @@ package ch.alpine.sonata.enc.ly;
 
 import java.io.BufferedReader;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import ch.alpine.sonata.enc.api.DiatonicPrecision;
 import ch.alpine.sonata.enc.api.ExportScoreFormat;
@@ -45,7 +45,7 @@ public final class LilypondFormat implements ExportScoreFormat, DiatonicPrecisio
   static void compile(Path file, String... strings) {
     List<String> list = new LinkedList<>();
     list.add(LilypondFormat.COMMAND.toString());
-    Stream.of(strings).forEach(list::add);
+    Arrays.stream(strings).forEach(list::add);
     list.add(file.getFileName().toString());
     ProcessBuilder processBuilder = new ProcessBuilder(list);
     processBuilder.directory(file.getParent().toFile());

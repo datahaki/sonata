@@ -1,15 +1,15 @@
 // code by jph
 package ch.alpine.sonata;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import ch.alpine.sonata.utl.TpfStatics;
 
 public enum Naturs {
   ;
-  private static final Map<Natur, KeySignature> NATUR_KEY = Stream.of(Natur.values()) //
+  private static final Map<Natur, KeySignature> NATUR_KEY = Arrays.stream(Natur.values()) //
       .collect(Collectors.toMap(n -> n, n -> KeySignature.fromType(TpfStatics.invert(n.ordinal()))));
 
   /** Careful: mapping is not surjective!

@@ -2,15 +2,15 @@
 package ch.alpine.sonata;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Stream;
 
 import ch.alpine.tensor.ext.PackageTestAccess;
 
 public class DiatoneAlter implements Serializable {
-  private static final List<DiatoneAlter> LIST = Stream.of(Diatone.values()) //
-      .flatMap(diatone -> Stream.of(Alter.values()).map(alter -> new DiatoneAlter(diatone, alter))) //
+  private static final List<DiatoneAlter> LIST = Arrays.stream(Diatone.values()) //
+      .flatMap(diatone -> Arrays.stream(Alter.values()).map(alter -> new DiatoneAlter(diatone, alter))) //
       .toList();
 
   public static DiatoneAlter from(Diatone diatone, Alter alter) {

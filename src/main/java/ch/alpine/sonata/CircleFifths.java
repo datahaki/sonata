@@ -1,17 +1,17 @@
 // code by jph
 package ch.alpine.sonata;
 
+import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import ch.alpine.tensor.ext.Integers;
 import sys.mat.IntRange;
 
 public enum CircleFifths {
   ;
-  private static final List<DiatoneAlter> LIST = Stream.of(QuintenZirkel.values()) //
+  private static final List<DiatoneAlter> LIST = Arrays.stream(QuintenZirkel.values()) //
       .map(QuintenZirkel::diatoneAlter) //
       .toList();
 
