@@ -21,20 +21,20 @@ public final class LilypondFormat implements ExportScoreFormat, DiatonicPrecisio
 
   /** generates single .ly file (without further processing to pdf etc.)
    * 
-   * @param file
+   * @param path
    * @param score
    * @param exportOptions
    * @return
    * @throws Exception */
-  public static Path putFile(Path file, Score score, LilypondLayout lilypondLayout, LilypondParam lilypondParam) throws Exception {
+  public static Path putFile(Path path, Score score, LilypondLayout lilypondLayout, LilypondParam lilypondParam) throws Exception {
     LilypondWriter lilypondWriter = new LilypondWriter(new LilypondHeader(lilypondLayout));
     {
       LilypondScore lilypondScore = new LilypondScore(score, lilypondLayout, lilypondParam);
       lilypondWriter.tocItem(score);
       lilypondWriter.append(lilypondScore);
     }
-    lilypondWriter.toFile(file);
-    return file;
+    lilypondWriter.toFile(path);
+    return path;
   }
 
   @Override

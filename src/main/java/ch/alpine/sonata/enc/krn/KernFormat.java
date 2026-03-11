@@ -76,7 +76,7 @@ class Chunk {
 public class KernFormat implements ImportScoreFormat, //
     KeyModeDatabaseRequest, TempoDatabaseRequest, DiatonicPrecision {
   @Override
-  public Score get(Path file) throws Exception {
+  public Score get(Path path) throws Exception {
     Score score = new Score();
     score.isKeyModeValid = false;
     String altComment = "";
@@ -90,7 +90,7 @@ public class KernFormat implements ImportScoreFormat, //
     List<Chunk> chunks = new ArrayList<>();
     {
       Chunk chunk = null;
-      try (BufferedReader bufferedReader = Files.newBufferedReader(file)) {
+      try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
         String myString;
         int tabs = 0;
         while (Objects.nonNull(myString = bufferedReader.readLine()))
@@ -101,7 +101,7 @@ public class KernFormat implements ImportScoreFormat, //
                 score.title = HtmlConversion.removeHtml(myString.substring(beg + 2));
             }
             if (myString.startsWith("!!!division")) // ??? by now this is obsolete
-              System.out.println(file + " obsolete !!!division");
+              System.out.println(path + " obsolete !!!division");
             if (myString.startsWith("!!!removeDuplicates ")) {
               StringTokenizer myStringTokenizer = new StringTokenizer(myString);
               myStringTokenizer.nextToken();
