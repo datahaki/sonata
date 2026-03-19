@@ -38,8 +38,8 @@ public final class LilypondPngFormat implements ExportScoreFormat, DiatonicPreci
         .ifPresent(t -> {
           try {
             Files.delete(t);
-          } catch (IOException e) {
-            e.printStackTrace();
+          } catch (IOException ioException) {
+            ioException.printStackTrace();
           }
         });
     {
