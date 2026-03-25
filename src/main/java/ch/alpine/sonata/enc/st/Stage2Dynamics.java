@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 import ch.alpine.sonata.Dynamic;
 
 /** valid for {@link Stage2Reader} */
-/* package */ enum Stage2Dynamics {
+enum Stage2Dynamics {
   ;
   public static Dynamic getFromLine(String string) {
     final int length = string.length();

@@ -75,13 +75,13 @@ public enum Encoding {
     Integers.requireLessEquals(1, extensions.size());
   }
 
-  /* package */ Score getScore(Path file) throws Exception {
+  Score getScore(Path file) throws Exception {
     if (Files.exists(file))
       return importScoreFormat.get(file);
     throw new IllegalArgumentException("does not exist: " + file);
   }
 
-  /* package */ Path putScore(Path directory, String title, Score score, Object exportOptions) {
+  Path putScore(Path directory, String title, Score score, Object exportOptions) {
     Path file = directory.resolve(title + '.' + extension());
     try {
       exportScoreFormat.put(file, score, exportOptions);
