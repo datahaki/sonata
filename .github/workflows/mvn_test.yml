@@ -14,10 +14,10 @@ jobs:
       - name: checkout main repo
         uses: actions/checkout@v4
 
-      - name: set up JDK 25
+      - name: set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '25'
+          java-version: '27'
           distribution: 'temurin'
           cache: 'maven'
 
