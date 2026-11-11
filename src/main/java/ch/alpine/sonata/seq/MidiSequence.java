@@ -214,7 +214,7 @@ public abstract class MidiSequence {
     withText = myBoolean;
   }
 
-  private void mapText(Track track, LyricsFormatter lyricsFormatter, final int id) throws InvalidMidiDataException {
+  private static void mapText(Track track, LyricsFormatter lyricsFormatter, final int id) throws InvalidMidiDataException {
     for (int pass : IntRange.positive(lyricsFormatter.max_pass))
       for (Entry<Integer, String> entry : lyricsFormatter.getMap(pass).entrySet())
         track.add(new MidiEvent(fromString(id, entry.getValue()), entry.getKey()));
