@@ -17,7 +17,7 @@ import ch.alpine.tensor.Unprotect;
 class StaffPartitionTest {
   @Test
   void test() {
-    Path file = Unprotect.resourcePath("/io/nvm/bwv0603.nvm");
+    Path file = Unprotect.resourcePath("io/nvm/bwv0603.nvm");
     Score score = ScoreIO.read(file);
     assertEquals(score.staffPartition, "{2, 1, 1}");
     List<List<Voice>> list = StaffPartition.getStaffList(score);

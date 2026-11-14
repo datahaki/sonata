@@ -59,7 +59,7 @@ class MusicXmlFormatTest {
 
   @Test
   void test01() {
-    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score01.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score01.mxl"));
     _checkTest01(score);
   }
 
@@ -67,7 +67,7 @@ class MusicXmlFormatTest {
   void testWriteRead() throws ClassNotFoundException, IOException {
     Path file = tempDir.resolve("temp.mxl");
     {
-      Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score01.mxl"));
+      Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score01.mxl"));
       ScoreIO.write(file, score);
     }
     Score score = ScoreIO.read(file);
@@ -77,14 +77,14 @@ class MusicXmlFormatTest {
 
   @Test
   void test02() throws ClassNotFoundException, IOException {
-    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score02.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score02.mxl"));
     assertEquals(score.voices.size(), 4);
     Serialization.copy(score);
   }
 
   @Test
   void test03() throws ClassNotFoundException, IOException {
-    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/test_score03.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score03.mxl"));
     assertEquals(score.voices.size(), 4);
     {
       assertEquals(score.voices.get(0).press.size(), 1);
@@ -120,7 +120,7 @@ class MusicXmlFormatTest {
     Path xmlFile; // = new File(folder, "bwv1014_2.xml");
     xmlFile = HomeDirectory.Downloads.resolve("bwv1014_2.xml");
     {
-      Path file = Unprotect.resourcePath("/io/nvm/bwv1014_2.nvm");
+      Path file = Unprotect.resourcePath("io/nvm/bwv1014_2.nvm");
       Score score = ScoreIO.read(file);
       _checkBwv1014_2(score);
       ScoreIO.write(xmlFile, score);

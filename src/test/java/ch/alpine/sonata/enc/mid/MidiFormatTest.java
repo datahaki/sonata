@@ -21,7 +21,7 @@ class MidiFormatTest {
 
   @Test
   void testMidi() {
-    Path file = Unprotect.resourcePath("/io/mid/bwv1087_01.mid");
+    Path file = Unprotect.resourcePath("io/mid/bwv1087_01.mid");
     Score score = ScoreIO.read(file);
     assertEquals(score.voices(), 2);
   }
@@ -36,7 +36,7 @@ class MidiFormatTest {
   void testMidiInstr() throws Exception {
     final Path midiFile = folder.resolve("bwv1014_2.mid");
     {
-      Path file = Unprotect.resourcePath("/io/nvm/bwv1014_2.nvm");
+      Path file = Unprotect.resourcePath("io/nvm/bwv1014_2.nvm");
       Score score = ScoreIO.read(file);
       _checkBwv1014_2(score);
       ScoreIO.write(midiFile, score);

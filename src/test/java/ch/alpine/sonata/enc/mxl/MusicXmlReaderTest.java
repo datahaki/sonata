@@ -12,7 +12,7 @@ import ch.alpine.tensor.Unprotect;
 class MusicXmlReaderTest {
   @Test
   void test() {
-    Score score = ScoreIO.read(Unprotect.resourcePath("/io/mxl/bwv1014_1.mxl"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/bwv1014_1.mxl"));
     assertEquals(score.staffPartition, "{2, 2, 1}");
   }
 }

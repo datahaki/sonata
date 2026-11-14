@@ -22,7 +22,7 @@ import ch.alpine.tensor.Unprotect;
 class NormalizationTest {
   @Test
   void testXml() {
-    Path file = Unprotect.resourcePath("/io/mxl/test_score01.mxl");
+    Path file = Unprotect.resourcePath("io/mxl/test_score01.mxl");
     Score score = ScoreIO.read(file);
     assertEquals(score.keySignature, KeySignature.A);
     Normalization.keySignature0(score);

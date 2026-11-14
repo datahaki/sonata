@@ -23,7 +23,7 @@ class NativeFormatTest {
 
   @Test
   void testNvm() throws ClassNotFoundException, IOException {
-    Path file = Unprotect.resourcePath("/io/nvm/bwv0528_2.nvm");
+    Path file = Unprotect.resourcePath("io/nvm/bwv0528_2.nvm");
     Score score = ScoreIO.read(file);
     assertEquals(score.voices(), 3);
     Serialization.copy(score);
@@ -31,7 +31,7 @@ class NativeFormatTest {
 
   @Test
   void testInstr() {
-    Score score = ScoreIO.read(Unprotect.resourcePath("/io/nvm/bwv0528_2.nvm"));
+    Score score = ScoreIO.read(Unprotect.resourcePath("io/nvm/bwv0528_2.nvm"));
     ExactScalarQ.require(score.bpm);
     assertEquals(score.bpm, SI.PER_MINUTE.quantity(99));
     assertEquals(score.voices.get(0).midiInstrument, MidiInstrument.GRAND_PIANO);
