@@ -3,8 +3,6 @@ package ch.alpine.sonata;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.IOException;
-
 import org.junit.jupiter.api.Test;
 
 import ch.alpine.tensor.ext.Integers;
@@ -12,7 +10,7 @@ import ch.alpine.tensor.ext.Serialization;
 
 class ToneTest {
   @Test
-  void testEquals() throws ClassNotFoundException, IOException {
+  void testEquals() {
     for (Ivory ivory : Ivory.all())
       for (int alter = -2; alter <= 2; ++alter)
         assertEquals(Tone.from(ivory.ivory(), alter), Serialization.copy(Tone.from(ivory.ivory(), alter)));

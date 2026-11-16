@@ -3,7 +3,6 @@ package ch.alpine.sonata.enc.nvm;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.IOException;
 import java.nio.file.Path;
 
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,7 @@ class NativeFormatTest {
   Path tempDir;
 
   @Test
-  void testNvm() throws ClassNotFoundException, IOException {
+  void testNvm() {
     Path file = Unprotect.resourcePath("io/nvm/bwv0528_2.nvm");
     Score score = ScoreIO.read(file);
     assertEquals(score.voices(), 3);

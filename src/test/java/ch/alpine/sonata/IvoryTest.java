@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.io.IOException;
-
 import org.junit.jupiter.api.Test;
 
 import ch.alpine.tensor.ext.Serialization;
@@ -22,7 +20,7 @@ class IvoryTest {
   }
 
   @Test
-  void testEquals() throws ClassNotFoundException, IOException {
+  void testEquals() {
     for (int ivory : IntRange.positive(Ivory.SIZE))
       assertEquals(Ivory.from(ivory), Serialization.copy(Ivory.from(ivory)));
     for (int ivory : IntRange.positive(Ivory.SIZE))

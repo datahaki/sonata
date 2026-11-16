@@ -1,7 +1,6 @@
 // code by jph
 package ch.alpine.sonata.prj.bol;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.BitSet;
@@ -26,7 +25,7 @@ public class ProjectionAttributes implements Serializable {
   // ---
   public int tracking_maxlength = 5;
 
-  public ProjectionAttributes getCopy() throws ClassNotFoundException, IOException {
+  public ProjectionAttributes getCopy() {
     return Serialization.copy(this);
   }
 

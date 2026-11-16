@@ -3,7 +3,6 @@ package ch.alpine.sonata.enc.mxl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -64,7 +63,7 @@ class MusicXmlFormatTest {
   }
 
   @Test
-  void testWriteRead() throws ClassNotFoundException, IOException {
+  void testWriteRead() {
     Path file = tempDir.resolve("temp.mxl");
     {
       Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score01.mxl"));
@@ -76,14 +75,14 @@ class MusicXmlFormatTest {
   }
 
   @Test
-  void test02() throws ClassNotFoundException, IOException {
+  void test02() {
     Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score02.mxl"));
     assertEquals(score.voices.size(), 4);
     Serialization.copy(score);
   }
 
   @Test
-  void test03() throws ClassNotFoundException, IOException {
+  void test03() {
     Score score = ScoreIO.read(Unprotect.resourcePath("io/mxl/test_score03.mxl"));
     assertEquals(score.voices.size(), 4);
     {
