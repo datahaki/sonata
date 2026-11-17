@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map.Entry;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.sonata.Dynamic;
 import ch.alpine.sonata.FiguredBass;
 import ch.alpine.sonata.Note;

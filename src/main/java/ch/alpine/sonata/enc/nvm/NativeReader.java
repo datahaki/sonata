@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.StringTokenizer;
 
 import ch.alpine.bridge.lang.EnumValue;
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.midkit.MidiInstrument;
 import ch.alpine.sonata.Clef;
 import ch.alpine.sonata.Division;

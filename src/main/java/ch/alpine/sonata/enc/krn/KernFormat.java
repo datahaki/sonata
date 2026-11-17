@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.sonata.Divisions;
 import ch.alpine.sonata.KeySignature;
 import ch.alpine.sonata.Voice;

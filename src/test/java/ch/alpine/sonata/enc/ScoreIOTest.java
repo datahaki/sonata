@@ -7,7 +7,7 @@ import java.nio.file.Path;
 
 import org.junit.jupiter.api.Test;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.sonata.scr.Score;
 import ch.alpine.tensor.Unprotect;
 import ch.alpine.tensor.chq.ExactScalarQ;

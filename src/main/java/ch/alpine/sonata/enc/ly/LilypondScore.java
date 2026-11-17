@@ -11,7 +11,7 @@ import java.util.NavigableSet;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.midkit.VoiceGroup;
 import ch.alpine.sonata.Attributes;
 import ch.alpine.sonata.Dynamic;

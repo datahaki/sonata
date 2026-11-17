@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.midkit.MidiInstrument;
 import ch.alpine.sonata.Attributes;
 import ch.alpine.sonata.Clef;

@@ -18,7 +18,7 @@ import java.util.TreeSet;
 import java.util.regex.Pattern;
 
 import ch.alpine.bridge.lang.EnumValue;
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.midkit.MidiInstrument;
 import ch.alpine.sonata.Alter;
 import ch.alpine.sonata.Clef;

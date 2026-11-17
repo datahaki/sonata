@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.midkit.MidiInstrument;
 import ch.alpine.sonata.enc.ScoreIO;
 import ch.alpine.sonata.scr.Score;

@@ -12,7 +12,7 @@ import java.util.Map.Entry;
 import java.util.NavigableMap;
 import java.util.Optional;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.sonata.Dynamic;
 import ch.alpine.sonata.FiguredBass;
 import ch.alpine.sonata.Meter;

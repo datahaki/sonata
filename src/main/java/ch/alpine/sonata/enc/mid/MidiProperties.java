@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import ch.alpine.bridge.lang.EnumValue;
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.sonata.Division;
 import ch.alpine.sonata.KeyMode;
 import ch.alpine.sonata.KeySignature;

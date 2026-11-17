@@ -10,7 +10,7 @@ import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.sonata.Division;
 import ch.alpine.sonata.KeyMode;
 import ch.alpine.sonata.KeySignature;

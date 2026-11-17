@@ -1,7 +1,7 @@
 // code by jph
 package ch.alpine.sonata.utl;
 
-import ch.alpine.bridge.lang.SI;
+import ch.alpine.bridge.math.SI;
 import ch.alpine.tensor.Scalar;
 
 public enum TpfStatics {
